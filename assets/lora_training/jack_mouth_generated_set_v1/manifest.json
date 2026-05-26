@@ -1,0 +1,27 @@
+{
+  "set": "jack_mouth_generated_set_v1",
+  "rule": "Only mouth/muzzle images generated in this Codex chat are included.",
+  "status": "needs_visual_qc",
+  "images": [
+    "images/jack_mouth_generated_ref_01.png",
+    "images/jack_mouth_generated_ref_02.png",
+    "images/jack_mouth_generated_ref_03.png",
+    "images/jack_mouth_generated_ref_04.png",
+    "images/jack_mouth_generated_ref_05.png",
+    "images/jack_mouth_generated_ref_06.png",
+    "images/jack_mouth_generated_ref_07.png",
+    "images/jack_mouth_generated_ref_08.png",
+    "images/jack_mouth_generated_ref_09.png",
+    "images/jack_mouth_generated_ref_10.png",
+    "images/jack_mouth_generated_ref_11.png",
+    "images/jack_mouth_generated_ref_12.png",
+    "images/jack_mouth_generated_ref_13.png",
+    "images/jack_mouth_generated_ref_14.png"
+  ],
+  "excluded_sources": [
+    "assets/puppet/layers/mouth",
+    "assets/puppet/layers_staging/mouth_r1",
+    "assets/puppet/layers_staging/mouth_r2",
+    "assets/puppet/_rejected_placeholder_assets_v1/mouth"
+  ]
+}

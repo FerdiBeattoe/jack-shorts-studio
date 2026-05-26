@@ -1,0 +1,117 @@
+{
+  "qc_type": "full_body_integration",
+  "revision": "r1",
+  "canvas": [
+    768,
+    768
+  ],
+  "production_assets_used": {
+    "hands": [
+      "jack_hand_left.png",
+      "jack_hand_right.png"
+    ],
+    "belt": [
+      "jack_belt.png"
+    ],
+    "mouth": [
+      "jack_mouth_neutral.png",
+      "jack_mouth_slight_smirk.png"
+    ],
+    "topwear": [
+      "jack_jacket.png",
+      "jack_shirt_tie.png"
+    ]
+  },
+  "baseline_assets_used": {
+    "see_through_extracted": [
+      "back hair",
+      "ears",
+      "face",
+      "eyebrow",
+      "eyewhite",
+      "irides",
+      "legwear",
+      "footwear",
+      "handwear"
+    ]
+  },
+  "layer_order_back_to_front": [
+    "back hair",
+    "ears",
+    "face",
+    "eyebrow",
+    "eyewhite",
+    "irides",
+    "mouth(neutral)",
+    "legwear",
+    "footwear",
+    "handwear (ST unmodified)",
+    "shirt+tie",
+    "jacket",
+    "belt",
+    "hand R",
+    "hand L"
+  ],
+  "anchors": {
+    "jacket_tl": [
+      314,
+      152
+    ],
+    "jacket_size": [
+      191,
+      276
+    ],
+    "shirt_tl": [
+      325,
+      164
+    ],
+    "shirt_size": [
+      169,
+      220
+    ],
+    "belt_tl": [
+      347,
+      379
+    ],
+    "belt_size": [
+      123,
+      31
+    ],
+    "mouth_pos_on_canvas": [
+      359,
+      93
+    ],
+    "mouth_scale_factor": 0.1832,
+    "hand_R_pos": [
+      304,
+      404
+    ],
+    "hand_R_size": [
+      41,
+      67
+    ],
+    "hand_L_pos": [
+      474,
+      404
+    ],
+    "hand_L_size": [
+      42,
+      67
+    ],
+    "hand_scale": 0.42,
+    "cuff_y": 410
+  },
+  "rules_followed": {
+    "see_through_handwear_unmodified": true,
+    "no_copainter_arms": true,
+    "shirt_behind_jacket": true,
+    "belt_over_topwear": true,
+    "hands_at_cuffs": true,
+    "mouth_over_face": true
+  },
+  "categories_still_baseline_not_production": [
+    "head (back hair, ears, face, eyebrow, eyewhite, irides)",
+    "lower body (legwear, footwear)",
+    "handwear (See-through used unmodified)"
+  ]
+}

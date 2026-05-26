@@ -1,0 +1,424 @@
+{
+    "manifest_version":  "1.0",
+    "character":  "jack",
+    "date":  "2026-05-19",
+    "description":  "Complete manifest of all puppet layer assets required for Jack Character Animator rig v1",
+    "assets":  [
+                   {
+                       "asset_id":  "ref_character_master",
+                       "required_file_path":  "assets/jack_saas_design_asset_pack_v0_1/jack_saas_design_asset_pack_v0_1/01_character/master_refs/jack_character_sheet_master.png",
+                       "category":  "reference",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Canonical design anchor. Do not modify. All generated assets must match this."
+                   },
+                   {
+                       "asset_id":  "keyframe_01",
+                       "required_file_path":  "public/images/jack_01_forward_calculating.png",
+                       "category":  "reference",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Existing still â€” used as Remotion fallback until shot_01 animation is exported."
+                   },
+                   {
+                       "asset_id":  "keyframe_02",
+                       "required_file_path":  "public/images/jack_02_tie_fix_confident_smirk.png",
+                       "category":  "reference",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Existing still â€” fallback for shots 04, 05, 06."
+                   },
+                   {
+                       "asset_id":  "keyframe_03",
+                       "required_file_path":  "public/images/jack_03_turning_to_monitor.png",
+                       "category":  "reference",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Existing still â€” fallback for shot_07."
+                   },
+                   {
+                       "asset_id":  "head_front_base",
+                       "required_file_path":  "assets/puppet/layers/head/jack_head_front_base.png",
+                       "category":  "head",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Base head layer. Golden fur, black nose, floppy ears. Transparent background. Front-facing."
+                   },
+                   {
+                       "asset_id":  "head_three_quarter_base",
+                       "required_file_path":  "assets/puppet/layers/head/jack_head_three_quarter_base.png",
+                       "category":  "head",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "3/4 angle head for shots 04â€“07. Same design as front base."
+                   },
+                   {
+                       "asset_id":  "head_nose",
+                       "required_file_path":  "assets/puppet/layers/head/jack_nose.png",
+                       "category":  "head",
+                       "required_for_v1":  false,
+                       "status":  "missing",
+                       "notes":  "Nose as separate warp layer. Optional for V1 â€” can be merged with head base."
+                   },
+                   {
+                       "asset_id":  "eye_left_open",
+                       "required_file_path":  "assets/puppet/layers/eyes/jack_eye_left_open.png",
+                       "category":  "eyes",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Left eye fully open."
+                   },
+                   {
+                       "asset_id":  "eye_right_open",
+                       "required_file_path":  "assets/puppet/layers/eyes/jack_eye_right_open.png",
+                       "category":  "eyes",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Right eye fully open."
+                   },
+                   {
+                       "asset_id":  "eye_left_half",
+                       "required_file_path":  "assets/puppet/layers/eyes/jack_eye_left_half.png",
+                       "category":  "eyes",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Left eye half-closed. Used for smug/suspicious expressions."
+                   },
+                   {
+                       "asset_id":  "eye_right_half",
+                       "required_file_path":  "assets/puppet/layers/eyes/jack_eye_right_half.png",
+                       "category":  "eyes",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Right eye half-closed."
+                   },
+                   {
+                       "asset_id":  "eye_left_closed",
+                       "required_file_path":  "assets/puppet/layers/eyes/jack_eye_left_closed.png",
+                       "category":  "eyes",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Left eye fully closed for blink."
+                   },
+                   {
+                       "asset_id":  "eye_right_closed",
+                       "required_file_path":  "assets/puppet/layers/eyes/jack_eye_right_closed.png",
+                       "category":  "eyes",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Right eye fully closed for blink."
+                   },
+                   {
+                       "asset_id":  "pupil_left",
+                       "required_file_path":  "assets/puppet/layers/eyes/jack_pupil_left.png",
+                       "category":  "eyes",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Left pupil as separate warp layer for eye-direction tracking in Character Animator."
+                   },
+                   {
+                       "asset_id":  "pupil_right",
+                       "required_file_path":  "assets/puppet/layers/eyes/jack_pupil_right.png",
+                       "category":  "eyes",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Right pupil as separate warp layer."
+                   },
+                   {
+                       "asset_id":  "eyebrow_left_neutral",
+                       "required_file_path":  "assets/puppet/layers/eyebrows/jack_eyebrow_left_neutral.png",
+                       "category":  "eyebrows",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Left eyebrow, neutral resting position."
+                   },
+                   {
+                       "asset_id":  "eyebrow_right_neutral",
+                       "required_file_path":  "assets/puppet/layers/eyebrows/jack_eyebrow_right_neutral.png",
+                       "category":  "eyebrows",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Right eyebrow, neutral."
+                   },
+                   {
+                       "asset_id":  "eyebrow_left_concerned",
+                       "required_file_path":  "assets/puppet/layers/eyebrows/jack_eyebrow_left_concerned.png",
+                       "category":  "eyebrows",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Left eyebrow, furrowed/concerned. Used shots 01â€“03."
+                   },
+                   {
+                       "asset_id":  "eyebrow_right_concerned",
+                       "required_file_path":  "assets/puppet/layers/eyebrows/jack_eyebrow_right_concerned.png",
+                       "category":  "eyebrows",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Right eyebrow, concerned."
+                   },
+                   {
+                       "asset_id":  "eyebrow_left_thinking",
+                       "required_file_path":  "assets/puppet/layers/eyebrows/jack_eyebrow_left_thinking.png",
+                       "category":  "eyebrows",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Left eyebrow, asymmetric thinking raise."
+                   },
+                   {
+                       "asset_id":  "eyebrow_right_thinking",
+                       "required_file_path":  "assets/puppet/layers/eyebrows/jack_eyebrow_right_thinking.png",
+                       "category":  "eyebrows",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Right eyebrow, thinking."
+                   },
+                   {
+                       "asset_id":  "eyebrow_left_smug",
+                       "required_file_path":  "assets/puppet/layers/eyebrows/jack_eyebrow_left_smug.png",
+                       "category":  "eyebrows",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Left eyebrow, arched confident. Used shots 04â€“06."
+                   },
+                   {
+                       "asset_id":  "eyebrow_right_smug",
+                       "required_file_path":  "assets/puppet/layers/eyebrows/jack_eyebrow_right_smug.png",
+                       "category":  "eyebrows",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Right eyebrow, smug arch."
+                   },
+                   {
+                       "asset_id":  "eyebrow_left_paranoid",
+                       "required_file_path":  "assets/puppet/layers/eyebrows/jack_eyebrow_left_paranoid.png",
+                       "category":  "eyebrows",
+                       "required_for_v1":  false,
+                       "status":  "missing",
+                       "notes":  "Optional â€” both brows raised in controlled alarm. Polish layer."
+                   },
+                   {
+                       "asset_id":  "eyebrow_right_paranoid",
+                       "required_file_path":  "assets/puppet/layers/eyebrows/jack_eyebrow_right_paranoid.png",
+                       "category":  "eyebrows",
+                       "required_for_v1":  false,
+                       "status":  "missing",
+                       "notes":  "Optional â€” paranoid brow variant."
+                   },
+                   {
+                       "asset_id":  "mouth_neutral",
+                       "required_file_path":  "assets/puppet/layers/mouth/jack_mouth_neutral.png",
+                       "category":  "mouth",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Mouth closed, rest position. Mandatory for Auto Mouth fallback."
+                   },
+                   {
+                       "asset_id":  "mouth_open",
+                       "required_file_path":  "assets/puppet/layers/mouth/jack_mouth_ah.png",
+                       "category":  "mouth",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Open vowel â€” ah/aw sounds. Layer name in PSD: \u0027Open\u0027."
+                   },
+                   {
+                       "asset_id":  "mouth_ee",
+                       "required_file_path":  "assets/puppet/layers/mouth/jack_mouth_ee.png",
+                       "category":  "mouth",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Front vowels â€” ee/ih. Layer name in PSD: \u0027Ee\u0027."
+                   },
+                   {
+                       "asset_id":  "mouth_oh",
+                       "required_file_path":  "assets/puppet/layers/mouth/jack_mouth_oh.png",
+                       "category":  "mouth",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Mid-back vowels â€” oh. Layer name in PSD: \u0027Oh\u0027."
+                   },
+                   {
+                       "asset_id":  "mouth_oo_w",
+                       "required_file_path":  "assets/puppet/layers/mouth/jack_mouth_oo_w.png",
+                       "category":  "mouth",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Back rounded â€” oo/w. Layer name in PSD: \u0027Ooh\u0027."
+                   },
+                   {
+                       "asset_id":  "mouth_mbp",
+                       "required_file_path":  "assets/puppet/layers/mouth/jack_mouth_mbp.png",
+                       "category":  "mouth",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Bilabial stops â€” m/b/p. Layer name in PSD: \u0027M B P\u0027."
+                   },
+                   {
+                       "asset_id":  "mouth_fv",
+                       "required_file_path":  "assets/puppet/layers/mouth/jack_mouth_fv.png",
+                       "category":  "mouth",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Labiodentals â€” f/v. Layer name in PSD: \u0027F V\u0027."
+                   },
+                   {
+                       "asset_id":  "mouth_l",
+                       "required_file_path":  "assets/puppet/layers/mouth/jack_mouth_l.png",
+                       "category":  "mouth",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Alveolar lateral â€” l. Layer name in PSD: \u0027L\u0027."
+                   },
+                   {
+                       "asset_id":  "mouth_s_dtn",
+                       "required_file_path":  "assets/puppet/layers/mouth/jack_mouth_s_dtn.png",
+                       "category":  "mouth",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Sibilants â€” s/d/t/n. Layer name in PSD: \u0027S\u0027."
+                   },
+                   {
+                       "asset_id":  "mouth_smile",
+                       "required_file_path":  "assets/puppet/layers/mouth/jack_mouth_smile.png",
+                       "category":  "mouth",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Closed smile. Layer name in PSD: \u0027Smile\u0027."
+                   },
+                   {
+                       "asset_id":  "mouth_smirk",
+                       "required_file_path":  "assets/puppet/layers/mouth/jack_mouth_smirk.png",
+                       "category":  "mouth",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Trigger-only smirk override. Layer name in PSD: \u0027Smirk\u0027. Not used by Auto Mouth."
+                   },
+                   {
+                       "asset_id":  "body_torso_front",
+                       "required_file_path":  "assets/puppet/layers/body/jack_torso_front.png",
+                       "category":  "body",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Black suit jacket, white shirt, visible from shoulders to waist. Front-facing."
+                   },
+                   {
+                       "asset_id":  "body_torso_three_quarter",
+                       "required_file_path":  "assets/puppet/layers/body/jack_torso_three_quarter.png",
+                       "category":  "body",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Same torso at 3/4 angle for shots 04â€“07."
+                   },
+                   {
+                       "asset_id":  "arm_left_resting",
+                       "required_file_path":  "assets/puppet/layers/body/jack_arm_left_resting.png",
+                       "category":  "body",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Left arm resting on chair arm."
+                   },
+                   {
+                       "asset_id":  "arm_right_resting",
+                       "required_file_path":  "assets/puppet/layers/body/jack_arm_right_resting.png",
+                       "category":  "body",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Right arm resting on chair arm."
+                   },
+                   {
+                       "asset_id":  "arm_right_tie_fix",
+                       "required_file_path":  "assets/puppet/layers/body/jack_arm_right_tie_fix.png",
+                       "category":  "body",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Right arm raised, hand at tie. Key action in shot 04."
+                   },
+                   {
+                       "asset_id":  "hand_right_tie_grip",
+                       "required_file_path":  "assets/puppet/layers/body/jack_hand_right_tie_grip.png",
+                       "category":  "body",
+                       "required_for_v1":  false,
+                       "status":  "missing",
+                       "notes":  "Optional close-up hand detail layer for tie-fix action."
+                   },
+                   {
+                       "asset_id":  "tie_straight",
+                       "required_file_path":  "assets/puppet/layers/body/jack_tie_straight.png",
+                       "category":  "body",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Tie as separate physics-enabled layer. Must not be merged with torso."
+                   },
+                   {
+                       "asset_id":  "tie_askew",
+                       "required_file_path":  "assets/puppet/layers/body/jack_tie_askew.png",
+                       "category":  "body",
+                       "required_for_v1":  false,
+                       "status":  "missing",
+                       "notes":  "Optional variant for paranoid moments."
+                   },
+                   {
+                       "asset_id":  "office_background_clean",
+                       "required_file_path":  "assets/puppet/layers/environment/office_background_clean.png",
+                       "category":  "environment",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Full office background, no character. Window, shelving, warm lighting."
+                   },
+                   {
+                       "asset_id":  "office_chair",
+                       "required_file_path":  "assets/puppet/layers/environment/office_chair.png",
+                       "category":  "environment",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Office chair layer. Jack is composited in front of this."
+                   },
+                   {
+                       "asset_id":  "desk_foreground",
+                       "required_file_path":  "assets/puppet/layers/environment/desk_foreground.png",
+                       "category":  "environment",
+                       "required_for_v1":  false,
+                       "status":  "missing",
+                       "notes":  "Optional desk foreground for depth layering."
+                   },
+                   {
+                       "asset_id":  "monitor_blank",
+                       "required_file_path":  "assets/puppet/layers/environment/monitor_blank.png",
+                       "category":  "environment",
+                       "required_for_v1":  false,
+                       "status":  "missing",
+                       "notes":  "Monitor prop with blank screen."
+                   },
+                   {
+                       "asset_id":  "crm_monitor_closeup",
+                       "required_file_path":  "assets/puppet/layers/environment/crm_monitor_closeup.png",
+                       "category":  "environment",
+                       "required_for_v1":  false,
+                       "status":  "missing",
+                       "notes":  "CRM screen insert for shot 03. See docs/missing_assets.md."
+                   },
+                   {
+                       "asset_id":  "ref_expression_sheet",
+                       "required_file_path":  "assets/puppet/refs/jack_expression_reference_sheet.png",
+                       "category":  "reference_sheets",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "All 8 expressions in a single reference sheet for QC."
+                   },
+                   {
+                       "asset_id":  "ref_viseme_sheet",
+                       "required_file_path":  "assets/puppet/refs/jack_viseme_reference_sheet.png",
+                       "category":  "reference_sheets",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "All 11 mouth shapes in a single reference sheet for QC."
+                   },
+                   {
+                       "asset_id":  "ref_body_poses",
+                       "required_file_path":  "assets/puppet/refs/jack_body_pose_reference_sheet.png",
+                       "category":  "reference_sheets",
+                       "required_for_v1":  true,
+                       "status":  "present",
+                       "notes":  "Body and arm poses reference sheet."
+                   }
+               ]
+}

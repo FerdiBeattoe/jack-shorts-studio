@@ -1,0 +1,78 @@
+{
+  "qc_type": "sleeve_integration_strategy",
+  "purpose": "Decide how to integrate CoPainter topwear split with See-through handwear before promoting topwear.",
+  "canvas": [
+    768,
+    768
+  ],
+  "anchors_used": {
+    "jacket_tl": [
+      314,
+      152
+    ],
+    "jacket_size": [
+      191,
+      276
+    ],
+    "shirt_tl": [
+      325,
+      164
+    ],
+    "shirt_size": [
+      169,
+      220
+    ],
+    "belt_tl": [
+      347,
+      379
+    ],
+    "belt_size": [
+      123,
+      31
+    ],
+    "hand_scale": 0.42,
+    "hand_R_pos": [
+      304,
+      404
+    ],
+    "hand_R_size": [
+      41,
+      67
+    ],
+    "hand_L_pos": [
+      474,
+      404
+    ],
+    "hand_L_size": [
+      42,
+      67
+    ],
+    "cuff_y": 410,
+    "jacket_right": 505,
+    "jacket_bottom": 428
+  },
+  "options": {
+    "A": {
+      "description": "CoPainter jacket + shirt+tie + promoted belt + promoted hands. NO See-through handwear.",
+      "overhang_surviving_px": 366,
+      "overhang_zone_total_px": 8303
+    },
+    "B": {
+      "description": "Same as A + See-through handwear unmodified.",
+      "overhang_surviving_px": 8303,
+      "overhang_zone_total_px": 8303
+    },
+    "C": {
+      "description": "Same as A + See-through handwear masked to (jacket silhouette OR y > jacket_bottom-4).",
+      "mask_method": "deterministic numpy mask: keep_handwear = (jacket_alpha > 50) | (y >= jacket_bottom-4)",
+      "overhang_surviving_px": 366,
+      "overhang_zone_total_px": 8303
+    },
+    "D": {
+      "description": "See-through baseline: original See-through merged topwear + handwear + promoted belt + hands. CoPainter topwear NOT used.",
+      "overhang_surviving_px": 8303,
+      "overhang_zone_total_px": 8303
+    }
+  },
+  "metric_note": "overhang_surviving_px counts opaque pixels in the 'lateral overhang zone' = where See-through handwear extends past the jacket silhouette within the jacket's y-range. Lower = cleaner. 0 = no strip-overhang visible."
+}

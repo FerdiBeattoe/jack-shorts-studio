@@ -1,0 +1,60 @@
+{
+  "category": "belt",
+  "promoted_at": "2026-05-19",
+  "promotion_status": "PRODUCTION",
+  "approval": {
+    "approved_via": "belt_r1 composite QC",
+    "qc_artifact":  "../../layers_staging/belt_r1/jack_belt_r1_composite_qc.png",
+    "qc_notes":     "../../layers_staging/belt_r1/belt_r1_notes.md",
+    "qc_manifest":  "../../layers_staging/belt_r1/belt_r1_manifest.json",
+    "summary": "Belt fits Jack's waist cleanly in full-body composite. Buckle aligned with shirt/tie centerline. Scale correct via jacket-width ratio. CoPainter max-alpha~254 quirk reviewed and accepted visually — no halo or seam at belt edges in composite."
+  },
+  "source": {
+    "copainter_zip": "../../cloud_layer_tests/copainter/layers_1779216312185.zip",
+    "copainter_zip_layer": "../../cloud_layer_tests/copainter/extracted_layers_1779216312185/layer_77.png",
+    "maps_to": "belt / buckle",
+    "donor_status": "DONOR_ONLY — extracted from CoPainter ZIP; full ZIP set is not the master design",
+    "staging_extraction_script": "../../../../tools/puppet/stage_belt_r1.py",
+    "see_through_audit_reference": "../../../../reports/jack_cloud_layer_splitter_output_audit.md"
+  },
+  "asset_format": {
+    "type": "bbox-cropped transparent PNG",
+    "mode": "RGBA",
+    "size": [174, 44],
+    "no_background": true,
+    "max_alpha_observed": 254,
+    "max_alpha_note": "CoPainter never produces alpha=255 across the ZIP; max observed is ~254. Pixel content preserved as-is (no alpha thresholding). Visually clean in composite — no halo or fringe at belt edges."
+  },
+  "copainter_origin_metadata": {
+    "present": false,
+    "note": "CoPainter ZIP ships loose bbox-cropped PNGs with no per-layer origin/offset metadata. Anchor below was derived manually using See-through layer geometry as the reference frame."
+  },
+  "anchor": {
+    "reference_canvas": "See-through full canvas (07_face.png etc. in 768x768)",
+    "canvas_size": [768, 768],
+    "waist_centerline_xy": [408, 394],
+    "topleft_in_canvas": [347, 379],
+    "scaled_size_on_canvas": [123, 31],
+    "scale_factor_copainter_to_seethrough": 0.7100,
+    "scale_basis": "CoPainter jacket width 269px maps to See-through topwear width 191px"
+  },
+  "naming_convention": {
+    "rule": "single addressable belt layer for the front-facing puppet",
+    "jack_belt.png": "Jack's belt with buckle"
+  },
+  "files": {
+    "jack_belt.png": {
+      "size": [174, 44],
+      "sha256": "1681d53b2daa6ad443f7ed83a292035684cfd0a161a03206cfc788d53bfa7f48",
+      "bytes_identical_to_source": true,
+      "byte_identical_to_staging_r1": true
+    }
+  },
+  "do_not": [
+    "modify pixel content (byte-identical copy from staging, preserved from CoPainter source)",
+    "rename to anything other than jack_belt.png without a fresh QC pass",
+    "rebake the alpha to force 255 — keep CoPainter's native semi-alpha edges",
+    "promote any other CoPainter layer (jacket/shirt/eyes/etc.) without a fresh staging+composite-QC pass per category",
+    "start PSD assembly from this manifest"
+  ]
+}

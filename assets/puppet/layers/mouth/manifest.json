@@ -1,0 +1,161 @@
+{
+  "category": "mouth",
+  "promoted_at": "2026-05-19",
+  "promotion_status": "PRODUCTION",
+  "approval": {
+    "approved_via": "mouth_r2 visual QC + composite QC",
+    "qc_artifact_visual": "../../layers_staging/mouth_r2/jack_mouth_r2_visual_qc.png",
+    "qc_artifact_composite": "../../layers_staging/mouth_r2/jack_mouth_r2_composite_qc.png",
+    "qc_notes": "../../layers_staging/mouth_r2/mouth_r2_notes.md",
+    "qc_manifest": "../../layers_staging/mouth_r2/mouth_r2_manifest.json",
+    "summary": "mouth_r2 passed visual QC on both See-through primary anchor and production head secondary anchor. All 9 visemes read as drawn-into Jack's muzzle rather than pasted-on. Open mouths no longer float. ee/fv teeth-free line approximations accepted. No face patch needed.",
+    "mouth_r1_status": "REJECTED \u2014 visemes were too large, used pure black + saturated maroon + visible teeth; superseded by r2."
+  },
+  "style_rules_inherited_from_r2": {
+    "transparent_rgba_only": true,
+    "face_patch_used": false,
+    "teeth_used": false,
+    "lineart_colour": "warm dark brown RGB(40, 35, 28) \u2014 sampled from production head face outline",
+    "open_mouth_interior": "same-hue inner shadow at 35% alpha, never a saturated fill",
+    "style_descriptor": "subtle deadpan adult-animation \u2014 not anime, cute, mascot, shocked, or goofy",
+    "method": "deterministic Pillow procedural draw, 4x supersample + LANCZOS downsample",
+    "no_ai_no_cloud": true
+  },
+  "canvas_convention": {
+    "size": [
+      512,
+      512
+    ],
+    "intrinsic_anchor_xy": [
+      256,
+      270
+    ],
+    "anchor_name": "mouth_centroid"
+  },
+  "composite_placement": {
+    "primary": {
+      "reference": "See-through face layer (07_face.png in 768x768 canvas)",
+      "canvas_size": [
+        768,
+        768
+      ],
+      "face_bbox_in_canvas": [
+        366,
+        44,
+        453,
+        147
+      ],
+      "muzzle_anchor_xy": [
+        405,
+        142
+      ],
+      "scale_factor_for_mouth_canvas": 0.1832
+    },
+    "secondary": {
+      "reference": "Production head jack_head_front_base.png",
+      "canvas_size": [
+        1024,
+        1024
+      ],
+      "mouth_anchor_xy": [
+        489,
+        745
+      ],
+      "mouth_canvas_topleft_in_head": [
+        233,
+        475
+      ],
+      "no_scale_needed": true
+    }
+  },
+  "files": {
+    "jack_mouth_neutral.png": {
+      "source_staging": "../../layers_staging/mouth_r2/jack_mouth_neutral_r2.png",
+      "size_bytes": 3275,
+      "sha256": "a6fd93c3e3d6d11c0781428d7719da8a9590b606a63b31572f90cb9da30fc26b",
+      "byte_identical_to_staging_r2": true
+    },
+    "jack_mouth_slight_frown.png": {
+      "source_staging": "../../layers_staging/mouth_r2/jack_mouth_slight_frown_r2.png",
+      "size_bytes": 4153,
+      "sha256": "9073642e4099bb73b3f02f7fb22787d2290427a512d94cf55f59a39855730f67",
+      "byte_identical_to_staging_r2": true
+    },
+    "jack_mouth_slight_smirk.png": {
+      "source_staging": "../../layers_staging/mouth_r2/jack_mouth_slight_smirk_r2.png",
+      "size_bytes": 4152,
+      "sha256": "0c2565c54695aca25f73ea59c4ead52edc177fe5f5acb847522426db5a682cdc",
+      "byte_identical_to_staging_r2": true
+    },
+    "jack_mouth_open_small.png": {
+      "source_staging": "../../layers_staging/mouth_r2/jack_mouth_open_small_r2.png",
+      "size_bytes": 2812,
+      "sha256": "e01146300620e8719f732c4f2640e574a3bd6507d55fae0a8c3683bc2d2f99e8",
+      "byte_identical_to_staging_r2": true
+    },
+    "jack_mouth_open_medium.png": {
+      "source_staging": "../../layers_staging/mouth_r2/jack_mouth_open_medium_r2.png",
+      "size_bytes": 4085,
+      "sha256": "c965bebbb5a77ca9aceb16c61a7db0a8e312e092015463519f57bfc449acd397",
+      "byte_identical_to_staging_r2": true
+    },
+    "jack_mouth_oo.png": {
+      "source_staging": "../../layers_staging/mouth_r2/jack_mouth_oo_r2.png",
+      "size_bytes": 2853,
+      "sha256": "aea183cab950966ae2a6029e6057469ba3fa39e200e9bd513ebe6ec1d8ae73ce",
+      "byte_identical_to_staging_r2": true
+    },
+    "jack_mouth_ee.png": {
+      "source_staging": "../../layers_staging/mouth_r2/jack_mouth_ee_r2.png",
+      "size_bytes": 2299,
+      "sha256": "6288a6aca4d4059cc2e0adb7c78f7ecee12744f79ec6054da17751efe5e5481a",
+      "byte_identical_to_staging_r2": true
+    },
+    "jack_mouth_fv.png": {
+      "source_staging": "../../layers_staging/mouth_r2/jack_mouth_fv_r2.png",
+      "size_bytes": 3067,
+      "sha256": "b012d47f1a029ceecf705e5581ac8e160cb6558803f006cc07663df61e46c767",
+      "byte_identical_to_staging_r2": true
+    },
+    "jack_mouth_mbp.png": {
+      "source_staging": "../../layers_staging/mouth_r2/jack_mouth_mbp_r2.png",
+      "size_bytes": 2122,
+      "sha256": "824b978521df2dcb2909765d54d7c2622d933b749e4c3ac54ff79ae6eb7cb0fa",
+      "byte_identical_to_staging_r2": true
+    }
+  },
+  "replaced_previous_assets": {
+    "jack_mouth_neutral.png": {
+      "size_bytes": 3647,
+      "sha256": "7b098680f39c5aa37303c4571df3b3663f0f3f5ee8ab6bcb1882596a039cb73c"
+    },
+    "jack_mouth_ee.png": {
+      "size_bytes": 6798,
+      "sha256": "22b7d60680221069cad0f0380acd04e75971ce7c73a86a9c8723aa8dbdccdde5"
+    },
+    "jack_mouth_fv.png": {
+      "size_bytes": 8948,
+      "sha256": "cfbbc6a79f10881c0e3d922db919fbb53f47e6196aad1d8b0def239c2085929e"
+    },
+    "jack_mouth_mbp.png": {
+      "size_bytes": 2632,
+      "sha256": "9e04bbe4a56d276f0eef7dba0a3b482e6601735d0fdc0890ac5e2c5a194571bd"
+    }
+  },
+  "previous_assets_left_untouched": [
+    "jack_mouth_ah.png",
+    "jack_mouth_l.png",
+    "jack_mouth_oh.png",
+    "jack_mouth_oo_w.png",
+    "jack_mouth_s_dtn.png",
+    "jack_mouth_smile.png",
+    "jack_mouth_smirk.png"
+  ],
+  "do_not": [
+    "modify pixel content (each PNG is byte-identical to its staging r2 source, sha256 verified)",
+    "promote mouth_r1 \u2014 explicitly REJECTED",
+    "rename or recolour these assets without a fresh QC pass",
+    "create new viseme variants ad-hoc \u2014 add to r3 staging first",
+    "start PSD assembly from this manifest"
+  ]
+}

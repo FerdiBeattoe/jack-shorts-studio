@@ -1,0 +1,123 @@
+{
+  "category": "topwear",
+  "promoted_at": "2026-05-19",
+  "promotion_status": "PRODUCTION",
+  "approval": {
+    "approved_via": "topwear_r1 visual/composite QC + sleeve_strategy_qc Option B",
+    "topwear_qc_visual": "../../layers_staging/topwear_r1/jack_topwear_r1_visual_qc.png",
+    "topwear_qc_composite": "../../layers_staging/topwear_r1/jack_topwear_r1_composite_qc.png",
+    "topwear_qc_notes": "../../layers_staging/topwear_r1/topwear_r1_notes.md",
+    "topwear_qc_manifest": "../../layers_staging/topwear_r1/topwear_r1_manifest.json",
+    "sleeve_qc_full_body": "../../layers_staging/topwear_r1/sleeve_strategy_qc/jack_topwear_sleeve_strategy_qc.png",
+    "sleeve_qc_zoom": "../../layers_staging/topwear_r1/sleeve_strategy_qc/jack_topwear_sleeve_strategy_zoom_qc.png",
+    "sleeve_qc_notes": "../../layers_staging/topwear_r1/sleeve_strategy_qc/sleeve_strategy_notes.md",
+    "sleeve_qc_manifest": "../../layers_staging/topwear_r1/sleeve_strategy_qc/sleeve_strategy_manifest.json",
+    "summary": "CoPainter topwear split passed staging QC and beats See-through merged on rig addressability (separable jacket + shirt/tie). Sleeve strategy QC chose Option B - keep See-through handwear unmodified in future composites for shoulder/arm bulk, no Krita cleanup, no mask logic. Max-254 alpha quirk reviewed and accepted visually."
+  },
+  "sources": {
+    "copainter_zip": "../../cloud_layer_tests/copainter/layers_1779216312185.zip",
+    "jacket": {
+      "copainter_zip_layer": "../../cloud_layer_tests/copainter/extracted_layers_1779216312185/layer_71.png",
+      "maps_to": "jacket",
+      "native_size": [
+        269,
+        390
+      ],
+      "source_sha256": "e4038fb79f481467b7f5ca60673a459dcf45e761e148e9d0e3e425e80236b7d0",
+      "max_alpha_observed": 254
+    },
+    "shirt_tie": {
+      "copainter_zip_layer": "../../cloud_layer_tests/copainter/extracted_layers_1779216312185/layer_75.png",
+      "maps_to": "shirt + tie",
+      "native_size": [
+        239,
+        311
+      ],
+      "source_sha256": "7a24c4fbbef2ef48653e5cfba31570b8e01df34bb7b5ef546f559df3dcd853a7",
+      "max_alpha_observed": 254
+    },
+    "donor_status": "DONOR_ONLY - extracted from CoPainter ZIP; full ZIP set is not the master design",
+    "staging_script": "../../../../tools/puppet/stage_topwear_r1.py",
+    "sleeve_qc_script": "../../../../tools/puppet/qc_topwear_sleeve_strategy.py"
+  },
+  "asset_format": {
+    "type": "bbox-cropped transparent PNG",
+    "mode": "RGBA",
+    "no_background": true,
+    "max_alpha_note": "CoPainter never produces alpha=255 across the ZIP; max observed is 254. Pixel content preserved as-is (no thresholding or recolour). Visually clean in composite - no halo or fringe at edges."
+  },
+  "copainter_origin_metadata": {
+    "present": false,
+    "note": "CoPainter ZIP ships loose bbox-cropped PNGs with no per-layer origin/offset. Anchors below were derived manually using See-through topwear bbox geometry."
+  },
+  "placement_on_seethrough_canvas": {
+    "reference_canvas": "See-through full canvas (768x768)",
+    "canvas_size": [
+      768,
+      768
+    ],
+    "see_through_topwear_bbox": [
+      314,
+      152,
+      505,
+      423
+    ],
+    "scale_factor_copainter_to_seethrough": 0.71,
+    "scale_basis": "CoPainter jacket width 269 px -> See-through topwear width 191 px",
+    "jacket_topleft_on_canvas": [
+      314,
+      152
+    ],
+    "jacket_scaled_size_on_canvas": [
+      191,
+      276
+    ],
+    "shirt_tie_topleft_on_canvas": [
+      325,
+      164
+    ],
+    "shirt_tie_scaled_size_on_canvas": [
+      169,
+      220
+    ],
+    "shirt_tie_offset_below_jacket_top_px": 12,
+    "draw_order_back_to_front": [
+      "jack_shirt_tie.png",
+      "jack_jacket.png"
+    ]
+  },
+  "sleeve_strategy_option_b": {
+    "decision_source": "sleeve_strategy_qc",
+    "recommendation": "Keep See-through handwear UNMODIFIED in future composites for shoulder/arm bulk under the CoPainter jacket.",
+    "do_not_clip_or_mask_seethrough_handwear": true,
+    "do_not_use_copainter_arms": true,
+    "krita_cleanup_required": false,
+    "why": "When promoted hands are present at the cuff anchors, the lateral handwear pixels that extend past the jacket silhouette read visually as proper shoulder/arm volume - not as overhang strips. The 8303-px raw overhang metric is overridden by visual QC."
+  },
+  "files": {
+    "jack_jacket.png": {
+      "source_staging": "../../layers_staging/topwear_r1/jack_jacket_r1.png",
+      "size_bytes": 167099,
+      "sha256": "e4038fb79f481467b7f5ca60673a459dcf45e761e148e9d0e3e425e80236b7d0",
+      "byte_identical_to_staging_r1": true
+    },
+    "jack_shirt_tie.png": {
+      "source_staging": "../../layers_staging/topwear_r1/jack_shirt_tie_r1.png",
+      "size_bytes": 117676,
+      "sha256": "7a24c4fbbef2ef48653e5cfba31570b8e01df34bb7b5ef546f559df3dcd853a7",
+      "byte_identical_to_staging_r1": true
+    }
+  },
+  "replaced_previous_assets": {},
+  "do_not": [
+    "modify pixel content (each PNG is byte-identical to its staging r1 source, sha256 verified)",
+    "promote CoPainter arms (layer_76 / layer_78 - extended-pose, not Jack at-side)",
+    "promote eyes/blinks from CoPainter (eyes_blink_r1 rejected for production blink/closed use)",
+    "rename or recolour these assets without a fresh QC pass",
+    "apply alpha thresholding to force max=255 - keep CoPainter native semi-alpha edges",
+    "change the draw order - shirt/tie BEHIND jacket",
+    "mask or clip See-through handwear in future composites (Option B was chosen explicitly)",
+    "start PSD assembly from this manifest",
+    "delete project-root ZIP duplicates"
+  ]
+}

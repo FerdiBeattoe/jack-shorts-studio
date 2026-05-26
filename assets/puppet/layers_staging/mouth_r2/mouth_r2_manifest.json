@@ -1,0 +1,293 @@
+{
+  "category": "mouth",
+  "revision": "r2",
+  "supersedes": "mouth_r1 (rejected)",
+  "status": "STAGING_ONLY",
+  "method": "deterministic Pillow procedural draw (build_mouth_r2.py), 4x supersample + LANCZOS downsample",
+  "no_ai_no_cloud": true,
+  "rejection_of_r1": [
+    "r1 mouths were 270-290 px wide; r2 reduced to 140-170 px (closed) / 34-82 px (open)",
+    "r1 used pure black RGB(20,20,20); r2 uses warm dark brown RGB(40,35,28) sampled from production head face outline",
+    "r1 used saturated maroon mouth interior + red tongue + cream teeth; r2 has line-only with optional faint same-hue inner shadow at 35% alpha",
+    "r1 ee/fv had explicit tooth shapes and dividers; r2 ee/fv are line-shape approximations only - no teeth",
+    "r1 line weight 5px; r2 line weight 4px (3 for secondary detail lines)"
+  ],
+  "mouth_canvas_convention": {
+    "size": [
+      512,
+      512
+    ],
+    "is_full_canvas": true,
+    "intrinsic_anchor_xy": [
+      256,
+      270
+    ],
+    "anchor_name": "mouth_centroid"
+  },
+  "composite_placement": {
+    "primary": {
+      "reference": "See-through face layer (07_face.png in 768x768 canvas)",
+      "canvas_size": [
+        768,
+        768
+      ],
+      "face_bbox_in_canvas": [
+        366,
+        44,
+        453,
+        147
+      ],
+      "muzzle_anchor_xy": [
+        405,
+        142
+      ],
+      "scale_factor_for_mouth_canvas": 0.1832
+    },
+    "secondary": {
+      "reference": "Production head jack_head_front_base.png",
+      "canvas_size": [
+        1024,
+        1024
+      ],
+      "mouth_anchor_xy": [
+        489,
+        745
+      ],
+      "mouth_canvas_topleft_in_head": [
+        233,
+        475
+      ],
+      "no_scale_needed": true
+    }
+  },
+  "style_rules": [
+    "lineart RGB(40,35,28) - warm dark brown, matches face outline",
+    "inner shadow (open mouths) = same hue at 35% alpha, never a saturated fill",
+    "no teeth in any viseme",
+    "no tongue colour",
+    "deadpan / tired / adult-animation; no kawaii/anime/mascot/realistic detail",
+    "line weight ~4 px at final 512 resolution; secondary detail lines ~3 px"
+  ],
+  "face_patch": {
+    "required": false,
+    "reason": "r2 mouths are small enough (closed widths 110-168 px) that they sit cleanly at mouth y=745, above the baked chin split (y=748-820). The chin split reads as a faint chin-shadow under the mouth. No patch generated in r2 - this is intentional per spec ('no face patch in r2 unless absolutely necessary')."
+  },
+  "visemes": {
+    "neutral": {
+      "file": "jack_mouth_neutral_r2.png",
+      "size": [
+        512,
+        512
+      ],
+      "alpha_bbox": [
+        181,
+        263,
+        331,
+        283
+      ],
+      "bbox_wh": [
+        150,
+        20
+      ],
+      "centroid": [
+        255.7,
+        274.5
+      ],
+      "opaque_pct": 0.104,
+      "transparent_pct": 99.598,
+      "semi_alpha_pct": 0.298
+    },
+    "slight_frown": {
+      "file": "jack_mouth_slight_frown_r2.png",
+      "size": [
+        512,
+        512
+      ],
+      "alpha_bbox": [
+        179,
+        253,
+        333,
+        285
+      ],
+      "bbox_wh": [
+        154,
+        32
+      ],
+      "centroid": [
+        255.7,
+        272.1
+      ],
+      "opaque_pct": 0.105,
+      "transparent_pct": 99.574,
+      "semi_alpha_pct": 0.321
+    },
+    "slight_smirk": {
+      "file": "jack_mouth_slight_smirk_r2.png",
+      "size": [
+        512,
+        512
+      ],
+      "alpha_bbox": [
+        173,
+        247,
+        341,
+        280
+      ],
+      "bbox_wh": [
+        168,
+        33
+      ],
+      "centroid": [
+        256.5,
+        267.4
+      ],
+      "opaque_pct": 0.112,
+      "transparent_pct": 99.545,
+      "semi_alpha_pct": 0.343
+    },
+    "open_small": {
+      "file": "jack_mouth_open_small_r2.png",
+      "size": [
+        512,
+        512
+      ],
+      "alpha_bbox": [
+        229,
+        260,
+        283,
+        280
+      ],
+      "bbox_wh": [
+        54,
+        20
+      ],
+      "centroid": [
+        255.6,
+        269.7
+      ],
+      "opaque_pct": 0.061,
+      "transparent_pct": 99.724,
+      "semi_alpha_pct": 0.214
+    },
+    "open_medium": {
+      "file": "jack_mouth_open_medium_r2.png",
+      "size": [
+        512,
+        512
+      ],
+      "alpha_bbox": [
+        215,
+        255,
+        297,
+        285
+      ],
+      "bbox_wh": [
+        82,
+        30
+      ],
+      "centroid": [
+        255.7,
+        269.7
+      ],
+      "opaque_pct": 0.103,
+      "transparent_pct": 99.337,
+      "semi_alpha_pct": 0.56
+    },
+    "oo": {
+      "file": "jack_mouth_oo_r2.png",
+      "size": [
+        512,
+        512
+      ],
+      "alpha_bbox": [
+        239,
+        255,
+        273,
+        285
+      ],
+      "bbox_wh": [
+        34,
+        30
+      ],
+      "centroid": [
+        255.6,
+        269.7
+      ],
+      "opaque_pct": 0.042,
+      "transparent_pct": 99.738,
+      "semi_alpha_pct": 0.22
+    },
+    "ee": {
+      "file": "jack_mouth_ee_r2.png",
+      "size": [
+        512,
+        512
+      ],
+      "alpha_bbox": [
+        181,
+        261,
+        331,
+        282
+      ],
+      "bbox_wh": [
+        150,
+        21
+      ],
+      "centroid": [
+        255.6,
+        270.1
+      ],
+      "opaque_pct": 0.183,
+      "transparent_pct": 99.271,
+      "semi_alpha_pct": 0.546
+    },
+    "fv": {
+      "file": "jack_mouth_fv_r2.png",
+      "size": [
+        512,
+        512
+      ],
+      "alpha_bbox": [
+        186,
+        262,
+        326,
+        283
+      ],
+      "bbox_wh": [
+        140,
+        21
+      ],
+      "centroid": [
+        255.7,
+        274.5
+      ],
+      "opaque_pct": 0.118,
+      "transparent_pct": 99.503,
+      "semi_alpha_pct": 0.379
+    },
+    "mbp": {
+      "file": "jack_mouth_mbp_r2.png",
+      "size": [
+        512,
+        512
+      ],
+      "alpha_bbox": [
+        201,
+        265,
+        311,
+        277
+      ],
+      "bbox_wh": [
+        110,
+        12
+      ],
+      "centroid": [
+        255.7,
+        270.5
+      ],
+      "opaque_pct": 0.079,
+      "transparent_pct": 99.654,
+      "semi_alpha_pct": 0.267
+    }
+  }
+}

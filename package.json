@@ -1,0 +1,32 @@
+{
+  "name": "jack-shorts-studio",
+  "version": "1.0.0",
+  "description": "Jack SaaS TikTok short-video production pipeline — deterministic local render",
+  "private": true,
+  "scripts": {
+    "dev": "remotion studio src/Root.tsx",
+    "render": "remotion render src/Root.tsx DougEp02 --output renders/draft/doug_ep02_draft.mp4 --codec h264",
+    "generate-stills": "node scripts/generate-stills.mjs",
+    "generate-stills-lora": "node scripts/generate-stills.mjs --backend=lora-fal",
+    "prepare-training": "node scripts/prepare-lora-training.mjs",
+    "hf-upload-dataset": "node scripts/hf-upload-dataset.mjs",
+    "hf-upload-lora": "node scripts/hf-upload-lora.mjs",
+    "train-lora-runpod": "node scripts/train-lora-runpod.mjs"
+  },
+  "dependencies": {
+    "@fal-ai/client": "^1.2.0",
+    "@huggingface/hub": "^1.0.0",
+    "@napi-rs/canvas": "^1.0.0",
+    "@remotion/cli": "4.0.382",
+    "ag-psd": "^30.1.1",
+    "archiver": "^7.0.1",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "remotion": "4.0.382"
+  },
+  "devDependencies": {
+    "@types/react": "19.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "5.8.2"
+  }
+}

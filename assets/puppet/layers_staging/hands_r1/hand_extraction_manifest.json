@@ -1,0 +1,60 @@
+{
+  "source": "C:\\Users\\ferdi\\Desktop\\jack-shorts-studio\\assets\\puppet\\cloud_layer_tests\\inputs\\jack_front_hands_visible_r1.png",
+  "source_size": [
+    941,
+    1672
+  ],
+  "background_color_sample": [
+    229,
+    229,
+    229
+  ],
+  "background_tolerance": 18,
+  "cuff_band_y": [
+    700,
+    1050
+  ],
+  "method": "golden-fur cluster \u2192 8-connectivity foreground-CC overlap \u2192 RGBA crop",
+  "naming_convention": "character anatomy (left = character's left = image-right)",
+  "outputs": {
+    "jack_hand_left_r1.png": {
+      "bbox_in_source": [
+        632,
+        828,
+        734,
+        988
+      ],
+      "width": 102,
+      "height": 160,
+      "opaque_pct": 71.86,
+      "transparent_pct": 28.14,
+      "semi_alpha_pct": 0.0,
+      "bbox_in_layer": [
+        0,
+        0,
+        101,
+        157
+      ]
+    },
+    "jack_hand_right_r1.png": {
+      "bbox_in_source": [
+        228,
+        826,
+        326,
+        986
+      ],
+      "width": 98,
+      "height": 160,
+      "opaque_pct": 69.02,
+      "transparent_pct": 30.98,
+      "semi_alpha_pct": 0.0,
+      "bbox_in_layer": [
+        6,
+        0,
+        98,
+        150
+      ]
+    }
+  },
+  "promotion_status": "STAGING_ONLY \u2014 donor pose, not master design"
+}

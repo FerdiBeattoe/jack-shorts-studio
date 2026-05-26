@@ -1,0 +1,74 @@
+{
+  "category": "belt",
+  "revision": "r1",
+  "status": "STAGING_ONLY",
+  "source": {
+    "file": "assets/puppet/cloud_layer_tests/copainter/extracted_layers_1779216312185/layer_77.png",
+    "size": [
+      174,
+      44
+    ],
+    "sha256": "1681d53b2daa6ad443f7ed83a292035684cfd0a161a03206cfc788d53bfa7f48",
+    "max_alpha_observed": 254,
+    "note": "CoPainter never produces alpha=255; max observed ~254 across the ZIP. Pixel content preserved as-is \u2014 no thresholding or recolour applied during staging."
+  },
+  "bbox_crop_asset": {
+    "file": "jack_belt_r1.png",
+    "size": [
+      174,
+      44
+    ],
+    "sha256": "1681d53b2daa6ad443f7ed83a292035684cfd0a161a03206cfc788d53bfa7f48",
+    "is_byte_identical_copy_of_source": true
+  },
+  "full_canvas_test": {
+    "file": "jack_belt_r1_full_canvas_test.png",
+    "canvas_size": [
+      768,
+      768
+    ],
+    "canvas_origin": "See-through layer canvas (768x768)",
+    "belt_topleft_on_canvas": [
+      347,
+      379
+    ],
+    "belt_size_on_canvas": [
+      123,
+      31
+    ],
+    "scale_applied": 0.71
+  },
+  "anchor_derivation": {
+    "method": "manual visual \u2014 CoPainter ZIP has no origin metadata; anchor derived from See-through topwear/legwear bbox overlap",
+    "see_through_canvas": [
+      768,
+      768
+    ],
+    "topwear_bbox": [
+      314,
+      152,
+      505,
+      423
+    ],
+    "legwear_bbox": [
+      310,
+      364,
+      504,
+      641
+    ],
+    "topwear_legwear_overlap_y": [
+      364,
+      423
+    ],
+    "waist_centerline_xy": [
+      408,
+      394
+    ],
+    "scale_basis": "CoPainter jacket width 269px maps to See-through topwear width 191px -> scale 0.7100"
+  },
+  "do_not": [
+    "modify pixel content (the bbox crop is byte-identical to source)",
+    "promote to assets/puppet/layers/ until separate explicit task",
+    "rebake the alpha to force 255 \u2014 keep CoPainter's native semi-alpha edges"
+  ]
+}

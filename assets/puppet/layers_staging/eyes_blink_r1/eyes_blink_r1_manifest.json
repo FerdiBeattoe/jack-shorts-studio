@@ -1,0 +1,101 @@
+{
+  "category": "eyes_blink",
+  "revision": "r1",
+  "status": "STAGING_ONLY",
+  "source": {
+    "file": "assets/puppet/cloud_layer_tests/copainter/extracted_layers_1779216312185/layer_43.png",
+    "size": [
+      152,
+      249
+    ],
+    "sha256": "39341ba9acee412f3ac0b25f46f6db7df7528ce4c2e8debd1090386aa42277cb",
+    "structure_y_bands": {
+      "12-29": "eyebrows (ignored - out of scope)",
+      "30-94": "open eyes pair (top, ignored - duplicates existing 'open')",
+      "95-150": "closed/squinted eyes pair (extracted as _closed_r1)",
+      "160-249": "snout / jaw fragment (ignored)"
+    },
+    "max_alpha_observed": 254,
+    "copainter_alpha_quirk": "max alpha across ZIP is ~254, never 255; pixel content preserved as-is"
+  },
+  "extracted_assets": {
+    "jack_eye_left_closed_r1.png": {
+      "source_bbox_in_layer_43": [
+        28,
+        95,
+        88,
+        150
+      ],
+      "size": [
+        60,
+        55
+      ],
+      "max_alpha": 254,
+      "alpha_gt_0_pct": 100.0,
+      "alpha_ge_200_pct": 31.27,
+      "bbox": [
+        0,
+        0,
+        60,
+        55
+      ],
+      "represents": "character LEFT eye, image-LEFT in layer_43 - sleepy/heavy-lidded squint"
+    },
+    "jack_eye_right_closed_r1.png": {
+      "source_bbox_in_layer_43": [
+        92,
+        95,
+        152,
+        150
+      ],
+      "size": [
+        60,
+        55
+      ],
+      "max_alpha": 253,
+      "alpha_gt_0_pct": 82.42,
+      "alpha_ge_200_pct": 27.24,
+      "bbox": [
+        0,
+        0,
+        55,
+        55
+      ],
+      "represents": "character RIGHT eye, image-RIGHT in layer_43 - sleepy/heavy-lidded squint"
+    }
+  },
+  "half_variants_rejected": {
+    "reason": "Top eye pair in layer_43 (y=30-94) is Jack's normal OPEN deadpan look - matches existing jack_eye_*_open.png in style; CoPainter does NOT add a distinct half-state worth staging. Bottom pair was already taken as 'closed' for r1."
+  },
+  "naming_convention": {
+    "rule": "filenames use CHARACTER anatomy (left=character left=image-LEFT in this layer's frame)",
+    "note": "layer_43 internally already shows left/right as character-anatomy correct"
+  },
+  "composite_anchor_seethrough": {
+    "canvas": [
+      768,
+      768
+    ],
+    "eye_row_y": 86,
+    "left_eye_center_x": 396.8,
+    "right_eye_center_x": 430.2,
+    "scale_copainter_to_seethrough": 0.3439,
+    "scale_basis": "CoPainter head width 253 px maps to See-through face width 87 px -> 0.3439"
+  },
+  "composite_anchor_production_head": {
+    "canvas": [
+      1024,
+      1024
+    ],
+    "eye_row_y": 420,
+    "left_eye_center_x": 420,
+    "right_eye_center_x": 565,
+    "scale_copainter_to_head": 1.3333,
+    "scale_basis": "rough match \u2014 eye crop 60 px wide -> target ~80 px on production head"
+  },
+  "do_not": [
+    "modify pixel content (crops are byte-identical pixel extractions of the source region)",
+    "promote to assets/puppet/layers/eyes/ without a fresh QC comparing the squint look to the existing 'closed' full-lid-down convention",
+    "rename or recolour - keep CoPainter's native semi-alpha edges"
+  ]
+}

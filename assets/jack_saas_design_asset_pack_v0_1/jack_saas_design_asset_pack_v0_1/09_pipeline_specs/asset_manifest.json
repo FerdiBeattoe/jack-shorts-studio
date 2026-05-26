@@ -1,0 +1,44 @@
+{
+  "pack_name": "Jack SaaS Design Asset Pack",
+  "version": "0.1",
+  "status": "starter pack from current conversation assets; missing production assets listed separately",
+  "approved_current_assets": {
+    "character_master": "01_character/master_refs/jack_character_sheet_master.png",
+    "keyframes": [
+      {
+        "id": "jack_01_forward_calculating",
+        "path": "01_character/keyframes/jack_01_forward_calculating.png",
+        "use": "opening shot / problem-solving expression"
+      },
+      {
+        "id": "jack_02_tie_fix_confident_smirk",
+        "path": "01_character/keyframes/jack_02_tie_fix_confident_smirk.png",
+        "use": "confidence reset / tie fix"
+      },
+      {
+        "id": "jack_03_turning_to_monitor",
+        "path": "01_character/keyframes/jack_03_turning_to_monitor.png",
+        "use": "end turn toward monitor"
+      }
+    ],
+    "audio": "06_audio/doug_episode_02_voice_current.mp3"
+  },
+  "missing_assets_required_for_full_pack": [
+    "transparent Jack bust PNGs: 5 expressions",
+    "transparent Jack waist-up PNGs: 5 poses",
+    "office background plate without Jack",
+    "desk/monitor foreground plate without Jack",
+    "CRM monitor closeup insert",
+    "caption style templates",
+    "title/hook cards",
+    "thumbnail template",
+    "safe-zone guide overlay",
+    "brand palette and typography spec"
+  ],
+  "v1_renderer_scope": {
+    "output": "1080x1920 MP4, 30fps, H.264, AAC",
+    "renderer": "Remotion + FFmpeg",
+    "cloud_video_generation": "deferred",
+    "lip_sync": "deferred"
+  }
+}

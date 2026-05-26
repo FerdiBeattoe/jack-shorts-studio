@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+renders/
+out/
+
+# Python venvs
+.venv*/
+
+# Secrets — never commit
+.env
+.env.local
+.env.*.local
+
+# Model weights — too large for git, distributed via HuggingFace
+*.safetensors
+*.ckpt
+*.pt
+*.bin
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Nested research checkouts
+research/claude-code-video-toolkit/
+research/claude-remotion-kickstart/
+research/claude-video-vision/
+research/ffmpeg-mcp-lite/
+research/video-use/
+
+# Local scratch, quarantine, and non-source archives
+assets/_archive_mouth_reference_scratch_2026-05-26/
+assets/_junk_archive_2026-05-26/
+assets/_quarantine_nonmatching_lora_images_2026-05-26/
+assets/puppet/_rejected_placeholder_assets_v1/
+assets/puppet/cloud_layer_tests/

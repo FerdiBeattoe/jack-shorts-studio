@@ -1,0 +1,48 @@
+{
+  "episode": "doug_episode_02",
+  "duration_target_seconds": 38,
+  "beats": [
+    {
+      "start": 0.0,
+      "end": 2.8,
+      "asset": "jack_01_forward_calculating",
+      "caption": "Update on the Doug situation."
+    },
+    {
+      "start": 2.8,
+      "end": 6.8,
+      "asset": "jack_01_forward_calculating",
+      "caption": "Very normal. Very ethical."
+    },
+    {
+      "start": 6.8,
+      "end": 11.5,
+      "asset": "crm_monitor_closeup_missing",
+      "caption": "Email opened. Link clicked. Reply received."
+    },
+    {
+      "start": 11.5,
+      "end": 17.0,
+      "asset": "jack_02_tie_fix_confident_smirk",
+      "caption": "Either Doug is interested..."
+    },
+    {
+      "start": 17.0,
+      "end": 21.0,
+      "asset": "jack_02_tie_fix_confident_smirk",
+      "caption": "or Doug is tracking me back."
+    },
+    {
+      "start": 21.0,
+      "end": 28.5,
+      "asset": "jack_02_tie_fix_confident_smirk",
+      "caption": "Spiritually? The evidence is overwhelming."
+    },
+    {
+      "start": 28.5,
+      "end": 38.0,
+      "asset": "jack_03_turning_to_monitor",
+      "caption": "Quietly panicking in business clothes."
+    }
+  ]
+}

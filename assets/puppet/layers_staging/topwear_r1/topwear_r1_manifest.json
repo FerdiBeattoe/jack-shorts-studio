@@ -1,0 +1,100 @@
+{
+  "category": "topwear",
+  "revision": "r1",
+  "status": "STAGING_ONLY",
+  "split": [
+    "jacket",
+    "shirt_tie"
+  ],
+  "sources": {
+    "jack_jacket_r1.png": {
+      "copainter_zip_layer": "../../cloud_layer_tests/copainter/extracted_layers_1779216312185/layer_71.png",
+      "size": [
+        269,
+        390
+      ],
+      "sha256": "e4038fb79f481467b7f5ca60673a459dcf45e761e148e9d0e3e425e80236b7d0",
+      "max_alpha": 254,
+      "alpha_gt_0_pct": 80.62,
+      "alpha_ge_200_pct": 76.54,
+      "is_byte_identical_copy_of_source": true
+    },
+    "jack_shirt_tie_r1.png": {
+      "copainter_zip_layer": "../../cloud_layer_tests/copainter/extracted_layers_1779216312185/layer_75.png",
+      "size": [
+        239,
+        311
+      ],
+      "sha256": "7a24c4fbbef2ef48653e5cfba31570b8e01df34bb7b5ef546f559df3dcd853a7",
+      "max_alpha": 254,
+      "alpha_gt_0_pct": 72.0,
+      "alpha_ge_200_pct": 68.94,
+      "is_byte_identical_copy_of_source": true
+    }
+  },
+  "copainter_alpha_quirk": "Max alpha across CoPainter ZIP ~254 (never 255). Pixel content preserved; no thresholding or recolour applied during staging.",
+  "copainter_origin_metadata": {
+    "present": false,
+    "note": "CoPainter ZIP ships loose bbox-cropped PNGs with no per-layer origin/offset. Anchors derived visually against See-through topwear bbox."
+  },
+  "anchor_derivation": {
+    "reference_canvas": "See-through full canvas (768x768)",
+    "see_through_topwear_bbox": [
+      314,
+      152,
+      505,
+      423
+    ],
+    "body_centerline_x": 410,
+    "topwear_top_y": 152,
+    "scale_factor_copainter_to_seethrough": 0.71,
+    "scale_basis": "CoPainter jacket width 269 px -> See-through topwear width 191 px",
+    "shirt_tie_offset_below_jacket_top_px": 12
+  },
+  "full_canvas_test": {
+    "file": "jack_topwear_r1_full_canvas_test.png",
+    "canvas_size": [
+      768,
+      768
+    ],
+    "draw_order_back_to_front": [
+      "jack_shirt_tie_r1.png",
+      "jack_jacket_r1.png"
+    ],
+    "shirt_tie_topleft_on_canvas": [
+      325,
+      164
+    ],
+    "shirt_tie_size_on_canvas": [
+      169,
+      220
+    ],
+    "jacket_topleft_on_canvas": [
+      314,
+      152
+    ],
+    "jacket_size_on_canvas": [
+      191,
+      276
+    ]
+  },
+  "promoted_dependencies_used_in_qc": {
+    "belt": {
+      "file": "../../layers/belt/jack_belt.png",
+      "topleft_on_canvas": [
+        347,
+        379
+      ],
+      "size_on_canvas": [
+        123,
+        31
+      ]
+    }
+  },
+  "do_not": [
+    "modify pixel content (bbox crops are byte-identical to CoPainter source)",
+    "promote to assets/puppet/layers/ until separate explicit task",
+    "rebake the alpha to force 255 \u2014 keep CoPainter's native semi-alpha edges",
+    "change the back-to-front draw order \u2014 shirt+tie BEHIND jacket"
+  ]
+}

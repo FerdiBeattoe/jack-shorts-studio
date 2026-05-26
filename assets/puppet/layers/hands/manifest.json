@@ -1,0 +1,48 @@
+{
+  "category": "hands",
+  "promoted_at": "2026-05-19",
+  "promotion_status": "PRODUCTION",
+  "approval": {
+    "approved_via": "composite_qc",
+    "qc_artifact": "../../layers_staging/hands_r1/composite_qc/jack_hands_torso_fit_qc.png",
+    "qc_notes":    "../../layers_staging/hands_r1/composite_qc/jack_hands_torso_fit_notes.md",
+    "summary": "Hands fit See-through topwear cleanly in full-body composite. Metric flags (gold ΔE 42-43, sleeve-ratio 1.5-1.8x) reviewed and overridden by visual QC; no Krita cleanup required."
+  },
+  "donor": {
+    "source_image": "../../cloud_layer_tests/inputs/jack_front_hands_visible_r1.png",
+    "donor_status": "DONOR_ONLY — full body of donor image is NOT the master design, only hands extracted",
+    "extraction_method": "deterministic Pillow + numpy + opencv: golden-fur cluster → 8-connectivity foreground-CC overlap → RGBA crop",
+    "extraction_script": "../../../../tools/puppet/extract_jack_hands_r1.py",
+    "extraction_manifest": "../../layers_staging/hands_r1/hand_extraction_manifest.json"
+  },
+  "asset_format": {
+    "type": "bbox-cropped transparent PNG",
+    "mode": "RGBA",
+    "no_background": true,
+    "no_full_arm": true,
+    "cuff_fragment_included": true,
+    "notes": "Each PNG is a tight crop around the visible paw with a small black cuff sliver retained for edge continuity at the sleeve-to-paw seam."
+  },
+  "naming_convention": {
+    "rule": "filenames use CHARACTER anatomy, NOT image side",
+    "jack_hand_left.png":  "character's LEFT hand (image-RIGHT in source)",
+    "jack_hand_right.png": "character's RIGHT hand (image-LEFT in source)"
+  },
+  "files": {
+    "jack_hand_left.png": {
+      "size": [102, 160],
+      "sha256": "caac745e71938a58bbd99e4e1e548352db082a1c83ccb7448a8ab8f661b24d83",
+      "bbox_in_donor": [632, 828, 734, 988]
+    },
+    "jack_hand_right.png": {
+      "size": [98, 160],
+      "sha256": "0f0a1db6a4a49ced0dfe4a12efb9b5456062fbca851acdc545b88d5fd3780f3d",
+      "bbox_in_donor": [228, 826, 326, 986]
+    }
+  },
+  "do_not": [
+    "modify pixel content (byte-identical copy from staging)",
+    "rename to image-side conventions",
+    "promote any other hand-pose variant without a fresh composite QC pass"
+  ]
+}

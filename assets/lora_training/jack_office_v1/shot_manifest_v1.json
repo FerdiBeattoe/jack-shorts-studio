@@ -1,0 +1,127 @@
+{
+  "dataset": "jack_office_v1",
+  "trigger_token": "jack_saas",
+  "target_total_images": 50,
+  "source_references": [
+    "source_references/jack_character_sheet_master.png",
+    "source_references/episode_1a_anchor_01.png",
+    "source_references/episode_1a_anchor_02.png",
+    "source_references/episode_1a_anchor_03.png",
+    "source_references/episode_1a_anchor_04.png",
+    "source_references/episode_1a_anchor_05.png",
+    "source_references/episode_1a_anchor_06.png"
+  ],
+  "batches": [
+    {
+      "id": "batch_01_drift_test",
+      "status": "in_progress",
+      "goal": "Generate five high-control images to test identity and office drift before scaling.",
+      "shots": [
+        {
+          "id": "jack_office_v1_001",
+          "status": "planned",
+          "category": "close_up_mouth",
+          "shot": "close-up front view, calm closed mouth, tired half-lidded look"
+        },
+        {
+          "id": "jack_office_v1_002",
+          "status": "planned",
+          "category": "close_up_mouth",
+          "shot": "close-up three-quarter view, small open speaking mouth"
+        },
+        {
+          "id": "jack_office_v1_003",
+          "status": "planned",
+          "category": "bust_action",
+          "shot": "bust shot at desk, fixing black skinny tie with one paw"
+        },
+        {
+          "id": "jack_office_v1_004",
+          "status": "planned",
+          "category": "seated_desk",
+          "shot": "medium shot seated at desk, one paw near mouse, medium speaking mouth"
+        },
+        {
+          "id": "jack_office_v1_005",
+          "status": "planned",
+          "category": "wide_office",
+          "shot": "wide office shot, seated at desk, monitors and window visible"
+        }
+      ]
+    },
+    {
+      "id": "batch_02_mouth_expression_grid",
+      "status": "planned",
+      "shots": [
+        "closed neutral",
+        "small open",
+        "medium open",
+        "wide AH",
+        "round OH",
+        "pursed OO",
+        "pressed MBP",
+        "teeth EE",
+        "FV lower lip",
+        "smirk"
+      ]
+    },
+    {
+      "id": "batch_03_tie_and_hand_actions",
+      "status": "planned",
+      "shots": [
+        "fixing tie close-up",
+        "straightening jacket",
+        "paw on desk",
+        "paw on mouse",
+        "paw pointing at monitor",
+        "leaning back tired",
+        "leaning forward listening",
+        "one paw raised mid-explanation"
+      ]
+    },
+    {
+      "id": "batch_04_camera_variety",
+      "status": "planned",
+      "shots": [
+        "front bust",
+        "three-quarter bust",
+        "profile bust",
+        "low angle at desk",
+        "over-shoulder monitor view",
+        "wide establishing office",
+        "vertical shorts crop",
+        "desk-level close-up"
+      ]
+    },
+    {
+      "id": "batch_05_emotion_variety",
+      "status": "planned",
+      "shots": [
+        "dry amused",
+        "concerned",
+        "thinking",
+        "surprised",
+        "skeptical",
+        "confident",
+        "tired but charming",
+        "awkward sales smile",
+        "deadpan",
+        "relieved"
+      ]
+    },
+    {
+      "id": "batch_06_office_continuity",
+      "status": "planned",
+      "shots": [
+        "monitor glow close-up",
+        "window light profile",
+        "chair visible medium shot",
+        "coffee mug foreground",
+        "keyboard foreground",
+        "CRM dashboard implied",
+        "desk nameplate implied",
+        "late sunset office"
+      ]
+    }
+  ]
+}
