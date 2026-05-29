@@ -1,0 +1,15 @@
+{
+  "id": "jack_049",
+  "reason": "below-9-5 manual candidate previously rated 8 under strict threshold",
+  "moved": [
+    {
+      "from": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\jack_049.png",
+      "to": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\_rejected\\jack_049_REJECTED_below-9-5-manual-candidate-previously-rated-8-under-strict-threshold.png"
+    },
+    {
+      "from": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\jack_049.txt",
+      "to": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\_rejected\\jack_049_REJECTED_below-9-5-manual-candidate-previously-rated-8-under-strict-threshold.txt"
+    }
+  ],
+  "quarantined_at": "2026-05-29T17:34:26.550Z"
+}

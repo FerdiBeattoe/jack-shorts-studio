@@ -1,0 +1,15 @@
+{
+  "id": "jack_004",
+  "reason": "below-9-5 active image requires re-review under strict scoring",
+  "moved": [
+    {
+      "from": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\jack_004.png",
+      "to": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\_rejected\\jack_004_REJECTED_below-9-5-active-image-requires-re-review-under-strict-scoring.png"
+    },
+    {
+      "from": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\jack_004.txt",
+      "to": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\_rejected\\jack_004_REJECTED_below-9-5-active-image-requires-re-review-under-strict-scoring.txt"
+    }
+  ],
+  "quarantined_at": "2026-05-29T17:30:34.220Z"
+}

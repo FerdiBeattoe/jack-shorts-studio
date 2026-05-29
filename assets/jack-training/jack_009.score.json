@@ -1,0 +1,9 @@
+{
+  "id": "jack_009",
+  "score": 9.6,
+  "verdict": "ACCEPT",
+  "reviewer": "codex-four-agent-review",
+  "notes": "Clear jack_009 match: three-quarter left tired deadpan, half-lidded eyes, closed/neutral mouth, warm office continuity, black suit/tie, no visible paw defect.",
+  "source": "assets\\jack-training\\jack_009.png",
+  "accepted_at": "2026-05-29T17:40:42.863Z"
+}

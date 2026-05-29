@@ -1,0 +1,15 @@
+{
+  "id": "jack_011",
+  "reason": "below-9-5 wrong action paw on chest instead of clear mid-air gesture",
+  "moved": [
+    {
+      "from": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\jack_011.png",
+      "to": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\_rejected\\jack_011_REJECTED_below-9-5-wrong-action-paw-on-chest-instead-of-clear-mid-air-gesture.png"
+    },
+    {
+      "from": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\jack_011.txt",
+      "to": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\_rejected\\jack_011_REJECTED_below-9-5-wrong-action-paw-on-chest-instead-of-clear-mid-air-gesture.txt"
+    }
+  ],
+  "quarantined_at": "2026-05-29T17:40:43.379Z"
+}

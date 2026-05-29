@@ -1,0 +1,19 @@
+{
+  "id": "jack_011",
+  "reason": "office layout drift laptop placement inconsistent with accepted set",
+  "moved": [
+    {
+      "from": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\jack_011.png",
+      "to": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\_rejected\\jack_011_REJECTED_office-layout-drift-laptop-placement-inconsistent-with-accepted-set.png"
+    },
+    {
+      "from": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\jack_011.txt",
+      "to": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\_rejected\\jack_011_REJECTED_office-layout-drift-laptop-placement-inconsistent-with-accepted-set.txt"
+    },
+    {
+      "from": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\jack_011.score.json",
+      "to": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\_rejected\\jack_011_REJECTED_office-layout-drift-laptop-placement-inconsistent-with-accepted-set.score.json"
+    }
+  ],
+  "quarantined_at": "2026-05-29T21:41:26.696Z"
+}

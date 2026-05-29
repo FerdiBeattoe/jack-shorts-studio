@@ -1,0 +1,15 @@
+{
+  "id": "jack_014",
+  "reason": "reject gate dark nail-like paw marks and weak keyboard action",
+  "moved": [
+    {
+      "from": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\jack_014.png",
+      "to": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\_rejected\\jack_014_REJECTED_reject-gate-dark-nail-like-paw-marks-and-weak-keyboard-action.png"
+    },
+    {
+      "from": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\jack_014.txt",
+      "to": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\_rejected\\jack_014_REJECTED_reject-gate-dark-nail-like-paw-marks-and-weak-keyboard-action.txt"
+    }
+  ],
+  "quarantined_at": "2026-05-29T17:31:46.789Z"
+}

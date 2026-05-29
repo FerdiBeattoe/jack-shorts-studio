@@ -1,0 +1,9 @@
+{
+  "id": "jack_022",
+  "score": 9.6,
+  "verdict": "ACCEPT",
+  "reviewer": "codex-four-agent-review",
+  "notes": "Clear jack_022 match: full left profile engaged mid-sentence, paws resting on keyboard/laptop area, warm office continuity, correct wardrobe, no paw/nail defect.",
+  "source": "assets\\jack-training\\jack_022.png",
+  "accepted_at": "2026-05-29T17:43:29.168Z"
+}

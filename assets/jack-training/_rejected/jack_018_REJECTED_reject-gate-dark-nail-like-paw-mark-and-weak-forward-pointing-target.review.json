@@ -1,0 +1,15 @@
+{
+  "id": "jack_018",
+  "reason": "reject gate dark nail-like paw mark and weak forward pointing target",
+  "moved": [
+    {
+      "from": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\jack_018.png",
+      "to": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\_rejected\\jack_018_REJECTED_reject-gate-dark-nail-like-paw-mark-and-weak-forward-pointing-target.png"
+    },
+    {
+      "from": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\jack_018.txt",
+      "to": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\_rejected\\jack_018_REJECTED_reject-gate-dark-nail-like-paw-mark-and-weak-forward-pointing-target.txt"
+    }
+  ],
+  "quarantined_at": "2026-05-29T17:33:01.100Z"
+}

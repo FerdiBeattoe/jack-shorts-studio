@@ -1,0 +1,8 @@
+{
+  "id": "jack_001",
+  "score": 9.6,
+  "reviewer": "codex-four-agent-review",
+  "notes": "Correct jack_001 target after rejecting smirk candidate: front-facing tired deadpan, half-lidded eyes, closed neutral mouth, both paws resting on desk, accepted office/laptop continuity, correct wardrobe, no paw/nail defect.",
+  "source": "assets\\jack-training\\_generated_review\\jack_001_attempt2.png",
+  "accepted_at": "2026-05-29T22:58:54.022Z"
+}

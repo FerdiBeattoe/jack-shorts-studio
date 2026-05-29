@@ -1,0 +1,15 @@
+{
+  "id": "jack_006",
+  "reason": "below-9-5 prompt mismatch should be paws-covering-face but image is coffee sip",
+  "moved": [
+    {
+      "from": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\jack_006.png",
+      "to": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\_rejected\\jack_006_REJECTED_below-9-5-prompt-mismatch-should-be-paws-covering-face-but-image-is-coffee-sip.png"
+    },
+    {
+      "from": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\jack_006.txt",
+      "to": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\_rejected\\jack_006_REJECTED_below-9-5-prompt-mismatch-should-be-paws-covering-face-but-image-is-coffee-sip.txt"
+    }
+  ],
+  "quarantined_at": "2026-05-29T17:31:49.983Z"
+}

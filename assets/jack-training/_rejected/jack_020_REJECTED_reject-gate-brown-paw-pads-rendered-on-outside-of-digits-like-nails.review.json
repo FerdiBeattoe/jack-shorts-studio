@@ -1,0 +1,15 @@
+{
+  "id": "jack_020",
+  "reason": "reject gate brown paw pads rendered on outside of digits like nails",
+  "moved": [
+    {
+      "from": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\jack_020.png",
+      "to": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\_rejected\\jack_020_REJECTED_reject-gate-brown-paw-pads-rendered-on-outside-of-digits-like-nails.png"
+    },
+    {
+      "from": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\jack_020.txt",
+      "to": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\_rejected\\jack_020_REJECTED_reject-gate-brown-paw-pads-rendered-on-outside-of-digits-like-nails.txt"
+    }
+  ],
+  "quarantined_at": "2026-05-29T17:33:01.653Z"
+}

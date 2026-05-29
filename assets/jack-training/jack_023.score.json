@@ -1,0 +1,9 @@
+{
+  "id": "jack_023",
+  "score": 9.6,
+  "verdict": "ACCEPT",
+  "reviewer": "codex-four-agent-review",
+  "notes": "Clear jack_023 match: full left profile smug smirk, paw on chin thinking, warm office continuity, correct wardrobe, no visible paw/nail defect.",
+  "source": "assets\\jack-training\\jack_023.png",
+  "accepted_at": "2026-05-29T17:43:31.798Z"
+}

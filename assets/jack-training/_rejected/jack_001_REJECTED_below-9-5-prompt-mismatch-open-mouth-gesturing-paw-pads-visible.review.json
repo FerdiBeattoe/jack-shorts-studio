@@ -1,0 +1,15 @@
+{
+  "id": "jack_001",
+  "reason": "below-9-5 prompt mismatch open mouth gesturing paw pads visible",
+  "moved": [
+    {
+      "from": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\jack_001.png",
+      "to": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\_rejected\\jack_001_REJECTED_below-9-5-prompt-mismatch-open-mouth-gesturing-paw-pads-visible.png"
+    },
+    {
+      "from": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\jack_001.txt",
+      "to": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\_rejected\\jack_001_REJECTED_below-9-5-prompt-mismatch-open-mouth-gesturing-paw-pads-visible.txt"
+    }
+  ],
+  "quarantined_at": "2026-05-29T17:30:27.817Z"
+}

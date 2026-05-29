@@ -1,0 +1,9 @@
+{
+  "id": "jack_021",
+  "score": 9.6,
+  "verdict": "ACCEPT",
+  "reviewer": "codex-four-agent-review",
+  "notes": "Clear jack_021 match: full left profile tired deadpan, one paw lifting mug, warm office continuity, correct wardrobe, no visible paw/nail defect.",
+  "source": "assets\\jack-training\\jack_021.png",
+  "accepted_at": "2026-05-29T17:43:33.536Z"
+}

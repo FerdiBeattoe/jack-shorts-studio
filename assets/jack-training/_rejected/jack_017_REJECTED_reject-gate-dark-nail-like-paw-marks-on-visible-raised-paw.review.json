@@ -1,0 +1,15 @@
+{
+  "id": "jack_017",
+  "reason": "reject gate dark nail-like paw marks on visible raised paw",
+  "moved": [
+    {
+      "from": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\jack_017.png",
+      "to": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\_rejected\\jack_017_REJECTED_reject-gate-dark-nail-like-paw-marks-on-visible-raised-paw.png"
+    },
+    {
+      "from": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\jack_017.txt",
+      "to": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\_rejected\\jack_017_REJECTED_reject-gate-dark-nail-like-paw-marks-on-visible-raised-paw.txt"
+    }
+  ],
+  "quarantined_at": "2026-05-29T17:33:00.193Z"
+}

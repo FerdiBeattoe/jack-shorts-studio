@@ -1,0 +1,9 @@
+{
+  "id": "jack_015",
+  "score": 9.6,
+  "verdict": "ACCEPT",
+  "reviewer": "codex-four-agent-review",
+  "notes": "Clear jack_015 match: three-quarter right tired deadpan, both paws on desk, warm office continuity, correct wardrobe, no visible paw/nail defect.",
+  "source": "assets\\jack-training\\jack_015.png",
+  "accepted_at": "2026-05-29T17:42:15.359Z"
+}

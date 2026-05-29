@@ -5,8 +5,9 @@
  * Validates and packages the Jack LoRA training set.
  *
  * Reads images from `assets/jack-training/`, ensures each one has a paired
- * `.txt` caption file containing the trigger word `jacksaas`, and writes
- * a kohya_ss-compatible zip to `dist/jack-training.zip`.
+ * `.txt` caption file containing the trigger word `jacksaas`, requires a
+ * `.score.json` audit file with score >= 9.5, and writes a
+ * kohya_ss-compatible zip to `dist/jack-training.zip`.
  *
  * Usage:
  *   npm run prepare-training
@@ -60,15 +61,20 @@ if (images.length === 0) {
 const errors = [];
 const warnings = [];
 const captionLengths = [];
-const pairs = []; // { imagePath, captionPath, captionText }
+const pairs = []; // { imagePath, captionPath, scorePath, captionText }
 
 for (const imageName of images) {
   const imagePath = join(SRC, imageName);
   const base = basename(imageName, extname(imageName));
   const captionPath = join(SRC, `${base}.txt`);
+  const scorePath = join(SRC, `${base}.score.json`);
 
   if (!existsSync(captionPath)) {
     errors.push(`${imageName}: missing caption file (${base}.txt)`);
+    continue;
+  }
+  if (!existsSync(scorePath)) {
+    errors.push(`${imageName}: missing score audit file (${base}.score.json)`);
     continue;
   }
 
@@ -79,6 +85,11 @@ for (const imageName of images) {
   }
   if (!captionText.toLowerCase().includes(TRIGGER)) {
     errors.push(`${imageName}: caption missing trigger word "${TRIGGER}"`);
+    continue;
+  }
+  const score = readScore(scorePath);
+  if (!score.ok) {
+    errors.push(`${imageName}: invalid score audit file (${score.reason})`);
     continue;
   }
   captionLengths.push(captionText.length);
@@ -105,7 +116,7 @@ for (const imageName of images) {
     warnings.push(`${imageName}: ${extname(imageName)} (PNG is preferred for training)`);
   }
 
-  pairs.push({ imagePath, captionPath, imageName, captionName: `${base}.txt` });
+  pairs.push({ imagePath, captionPath, scorePath, imageName, captionName: `${base}.txt`, scoreName: `${base}.score.json` });
 }
 
 // ── Report ──────────────────────────────────────────────────────────────────
@@ -163,6 +174,7 @@ archive.pipe(output);
 for (const p of pairs) {
   archive.file(p.imagePath, { name: p.imageName });
   archive.file(p.captionPath, { name: p.captionName });
+  archive.file(p.scorePath, { name: p.scoreName });
 }
 await archive.finalize();
 await zipDone;
@@ -200,6 +212,28 @@ function readPngDimensions(path) {
   } catch {
     return null;
   }
+}
+
+function readScore(path) {
+  let data;
+  try {
+    data = JSON.parse(readFileSync(path, "utf-8"));
+  } catch (err) {
+    return { ok: false, reason: `JSON parse failed: ${err.message}` };
+  }
+  if (typeof data !== "object" || data === null) {
+    return { ok: false, reason: "score audit is not an object" };
+  }
+  if (Number(data.score) < 9.5) {
+    return { ok: false, reason: `score ${data.score} below 9.5` };
+  }
+  if (typeof data.notes !== "string" || data.notes.trim().length === 0) {
+    return { ok: false, reason: "notes missing" };
+  }
+  if (data.reject_gate === true || data.verdict === "REJECT") {
+    return { ok: false, reason: "reject gate/verdict present" };
+  }
+  return { ok: true };
 }
 
 async function loadArchiver() {

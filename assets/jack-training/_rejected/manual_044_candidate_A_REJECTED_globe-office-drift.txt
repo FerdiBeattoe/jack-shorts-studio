@@ -1,0 +1,1 @@
+﻿Rejected manual candidate for jack_044: pose/mug mostly usable, but background has globe/fancy-library office drift, which is explicitly forbidden by the office lock.

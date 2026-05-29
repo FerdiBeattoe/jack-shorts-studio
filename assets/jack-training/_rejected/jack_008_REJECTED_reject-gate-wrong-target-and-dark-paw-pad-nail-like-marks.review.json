@@ -1,0 +1,15 @@
+{
+  "id": "jack_008",
+  "reason": "reject gate wrong target and dark paw pad nail-like marks",
+  "moved": [
+    {
+      "from": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\jack_008.png",
+      "to": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\_rejected\\jack_008_REJECTED_reject-gate-wrong-target-and-dark-paw-pad-nail-like-marks.png"
+    },
+    {
+      "from": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\jack_008.txt",
+      "to": "C:\\Users\\User\\Desktop\\jack-shorts-studio\\assets\\jack-training\\_rejected\\jack_008_REJECTED_reject-gate-wrong-target-and-dark-paw-pad-nail-like-marks.txt"
+    }
+  ],
+  "quarantined_at": "2026-05-29T17:31:54.379Z"
+}

@@ -1,91 +1,77 @@
 # Jack LoRA Training Dataset - Generation Manifest
 
-Generated: 2026-05-26T17:26:00+02:00
+Completed: 2026-05-30T01:08:27+02:00
+Trigger word: `jacksaas`
 Total target: 50 images
-Total produced: 6/50 active
+Total generated and accepted: 50/50 active
+Minimum accepted score: 9.5/10
 
-## Pre-flight check
+## Final Validation
 
-All pre-flight checks passed: no, continued by explicit user override.
+- Active PNG count: 50
+- Active TXT count: 50
+- Active score JSON count: 50
+- Every PNG has a matching TXT: yes
+- Every PNG has a matching `.score.json`: yes
+- Every TXT starts with `jacksaas`: yes
+- Active captions containing `hand`, `hands`, `finger`, or `fingers`: 0
+- `npm run prepare-training`: pass
+- Package written: `dist/jack-training.zip` (161.28 MB)
 
-Issues:
+## Strict Gate
 
-- `jack-training-prompts.json` exists and parses cleanly.
-- `prompts[]` has exactly 50 entries.
-- `assets/jack-reference.png` exists and is readable.
-- `assets/jack-training/` exists.
-- `scripts/prepare-lora-training.mjs` is readable.
-- `scripts/generate-stills.mjs` is readable.
-- `codex.cmd --version` works and reports `codex-cli 0.130.0`.
-- Plain `codex` is blocked by Windows PowerShell execution policy, so generation used `codex.cmd`.
-- `locked_constants` is missing from `jack-training-prompts.json`.
-- Many entries have `special_note: null`; user overrode the stop condition.
-- Quota for 50-65 image generations cannot be confirmed from this environment.
+The active dataset now uses the 9.5+ scoring system in `SCORING.md`.
 
-## Existing image validation (jack_001 to jack_006)
+Reject gates applied:
 
-| ID | species | suit | tie | sneakers | office | style | framing | verdict |
-|---|---|---|---|---|---|---|---|---|
-| jack_001 | pass | pass | pass | n/a | pass warm baseline | pass | pass | KEEP |
-| jack_002 | pass | pass | pass | n/a | pass warm baseline | pass | pass | KEEP |
-| jack_003 | pass | pass | pass | n/a | pass warm baseline | pass | pass | KEEP |
-| jack_004 | pass | pass | pass | n/a | pass warm baseline | pass | pass | KEEP |
-| jack_005 | pass | pass | pass | n/a | pass warm baseline | pass | pass | KEEP |
-| jack_006 | pass | pass | pass | n/a | pass warm baseline | pass | pass | KEEP |
+- Wrong character/species or wardrobe
+- Office drift, including wrong bookshelf/laptop placement
+- Brown paw pads or dark marks on the outside/top of digits
+- Human-hand anatomy where dog paws are required
+- Wrong target pose, mouth, expression, or action
+- Wrong format, text, watermark, UI, or non-9:16 framing
 
-Regenerated: 0
+Future generation prompts append the paw lock at generation time:
 
-Caption repair:
+`Paws: golden fur on all visible surfaces, brown pad markings only on underside when visible, zero nail-like markings.`
 
-- Created `jack_001.txt` through `jack_006.txt` from `prompts[0..5].lora_caption`.
+## Nail-Defect Fixes
 
-## Generation log (jack_007 to jack_050)
+- Known defect fixed: `jack_020`
+- Rejected original: `jack_020_REJECTED_reject-gate-brown-paw-pads-rendered-on-outside-of-digits-like-nails.png`
+- Accepted replacement: `jack_020.png`, score 9.6
+- Additional nail/paw-risk rejections: `jack_008`, `jack_014`, `jack_017`, `jack_018`, `jack_040`, `jack_041`
 
-| id | pose | expression | mouth | hands | status | retry_count | failure_reason_if_any |
-|---|---|---|---|---|---|---|---|
-| jack_007 | front_facing_seated | surprised | wide_open_emphatic | both_paws_on_desk | FAILED_MOVED_OUT | 0 | JSON prompt generated teal open-plan office with dual monitors; diverges from approved warm wood desk/lamp/window baseline in jack_001-jack_006. |
+## Regenerations And Rejections
 
-No further images generated.
+- Rejected PNG records kept in `_rejected/`: 31
+- Review scratch retained in `_generated_review/` for audit only; active training uses root `jack_*.png/.txt/.score.json`.
+- User manual candidates below 9.5 were quarantined, not counted.
+- Mouth renders that pass are retained under `_mouth-renders/` and are not part of the 50-image requirement.
 
-## Drift observations
+Notable retries:
 
-Drift detected immediately at `jack_007`.
+- `jack_001`: rejected smirk candidate; accepted closed-neutral deadpan replacement.
+- `jack_004`: rejected tired expression; accepted engaged mid-sentence replacement.
+- `jack_005`: rejected two sleepy/tired attempts; accepted confident lecture replacement.
+- `jack_011`: accepted candidate was pulled back after user caught laptop placement drift; replacement accepted with laptop restored to lower-right foreground.
+- `jack_020`: repaired known nail-defect slot.
+- `jack_025`: rejected wrong profile direction; replacement accepted.
 
-The generated image follows the JSON's older teal open-plan office wording instead of the six-image approved baseline. This would contaminate the LoRA set because the office setting diverges systematically from `jack_001` and `jack_006`.
+## Drift Observations
 
-Action taken:
-
-- Moved failed `jack_007.png` out of the active dataset to `assets/jack-training/failed/jack_007_failed_wrong_setting.png`.
-- Moved failed `jack_007.txt` to `assets/jack-training/failed/jack_007_failed_wrong_setting.txt`.
-- Halted generation before producing `jack_008` through `jack_050`.
-
-## Failures
-
-- `jack_007`: wrong setting drift caused by JSON prompt/spec mismatch.
-
-## Final validation
-
-- PNG count: 6/50 active
-- TXT count: 6/50 active
-- Caption-image mismatches: 0 active filename-pair mismatches
-- Caption identity-leak violations: not fully evaluated after halt
-- Caption word-count violations: captions are longer than 30 words for some existing entries because they were copied exactly from the JSON as requested
+- Canonical office locked to warm wood executive office: golden blinds/window on camera-left, bookshelf on camera-right, dark wood desk, amber lighting, mug/legal pad, and laptop in lower-right foreground when visible.
+- Teal/open-plan office and globe/fancy-library variants were rejected.
+- Laptop placement was tightened in the generator prompt after `jack_011`.
 
 ## Costs
 
-- gpt-image-2 calls made: 1
-- Estimated quota consumed: 1 image generation
-- Wall-clock duration: 00:05
+- Estimated image generations/retries consumed: approximately 65-75 image calls, including rejected candidates and timeout completions.
+- Wall-clock duration: multi-hour controlled generation and review session ending 2026-05-30T01:08:27+02:00.
 
-## Next steps for user
+## Next Steps
 
-1. Decide which setting is canonical:
-   - the approved warm wood desk/lamp/window office in `jack_001` to `jack_006`, or
-   - the older teal open-plan office described in `jack-training-prompts.json`.
-2. Update `jack-training-prompts.json` so every `generation_prompt` matches the canonical setting before generating `jack_007` to `jack_050`.
-3. Add or restore the missing top-level `locked_constants` block.
-4. Once the JSON and baseline agree, resume from `jack_007`.
-5. Once all 50 images are validated, run:
-   `npm run prepare-training`
-6. Then:
-   `npm run hf-upload-dataset`
+1. `npm run hf-upload-dataset`
+2. `npm run train-lora-runpod`
+3. Copy `LORA_URL` to `.env`
+4. `npm run generate-stills-lora -- --episode=cut_1a`
