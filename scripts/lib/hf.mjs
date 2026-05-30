@@ -68,7 +68,7 @@ export async function ensureRepo({ repoType, name, accessToken, isPrivate = true
     return { created: true };
   } catch (err) {
     const msg = String(err?.message || err);
-    if (/already.*exist|409/i.test(msg)) return { created: false };
+    if (err?.statusCode === 409 || /already.*(exist|created)|409/i.test(msg)) return { created: false };
     throw err;
   }
 }
@@ -78,14 +78,15 @@ export async function ensureRepo({ repoType, name, accessToken, isPrivate = true
  */
 export async function uploadOneFile({ repoType, name, accessToken, localPath, pathInRepo }) {
   const hub = await loadHfHub();
-  const { createReadStream, statSync } = await import("node:fs");
+  const { readFileSync, statSync } = await import("node:fs");
   const size = statSync(localPath).size;
+  const content = new Blob([readFileSync(localPath)]);
   await hub.uploadFile({
     repo: { type: repoType, name },
     credentials: { accessToken },
     file: {
       path: pathInRepo,
-      content: createReadStream(localPath),
+      content,
       size,
     },
   });
